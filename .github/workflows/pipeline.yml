@@ -33,3 +33,6 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "ejf-pokedex" #Must be unique in Heroku
           heroku_email: "evan.fredericks@gmail.com"
+          healthcheck: https://ejf-pokedex.herokuapp.com/health
+          checkstring: "ok"
+          rollbackonhealthcheckfailed: true
